@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SouthSole ACO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+</head>
+
+
+
+
+
+    
+  <h1> SouthSole ACO FORM </h1>
+
+
+
+  <a href="info.html"> Click Here to Read the Rules before Submitting</a> <br> <br>
+  <a href="index.html"> Click Here to go back to the Main Page</a> <br> 
+
+  <body> 
+
+  <style>
+    h5 {
+      background-color: #f7f5f0;
+      width: 1200px; height: 750px;
+      border: 2px solid rgb(0, 0, 0);
+      padding: 50px;
+      margin: 20px;
+    }
+    </style>
+
+
+<head>
+	<title>Save Web Form Data to Spreadsheets</title>
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/17454/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted! Thank you.")
+				},
+				error: function(){
+					alert("There was an error with your submission.")
+				}
+			});
+		}
+	</script>
+</head>
+<br>
+
+<body> 
+    <center>
+    <h5>
+	<form id="myForm">
+			<label>Release:</label><br/> 
+			<input name="Release" /> <br/> 
+			<label>Color:</label> <br/> 
+			<input name="Color" /> <br/> 
+		
+			<label>Size:</label><br/> 
+			<input name="Size" /><br/>
+			
+			<label>Full Name:</label><br/> 
+			<input name="Full_Name" /><br/>
+			
+			<label>Email: </label> <br/> 
+			<input name="Email" /> (On login drop use example@gmail.com:password for format)<br/>
+			
+			<label>Phone Number:</label><br/> 
+			<input name="Phone_Number" /><br/>
+		
+			<label>Address: </label><br/> 
+			<input name="Addy" /><br/>
+			
+			<label>State: (Abbreviate)</label><br/> 
+			<input name="State" /><br/>
+			
+			<label>City:</label><br/> 
+			<input name="City" /><br/>
+			
+			<label>Zipcode:</label><br/> 
+			<input name="Zip" /><br/>
+			
+			<label>Card Type:</label><br/> 
+			<input name="Card_Type" /><br/>
+			
+			<label>Card Number:</label><br/> 
+			<input name="Card_Number" /><br/>
+			
+			<label>Card Exp:</label><br/> 
+			<input name="Card_Exp" /><br/>
+			
+			<label>CVV:</label><br/> 
+			<input name="CVV" /><br/>
+			<br/>
+		</form>
+	
+    <br>
+    If Your Item Does Not Meet Certain Requirements Of The Form, Please Leave Blank. <br> <br>
+	<button onclick='SubForm()'>Submit</button><br>
+	<br>Import Profiles Below: <br>
+	<a href="mailto:Kameronyoung15@gmail.com "> 
+	<img src="mIL.png" alt="Mail" width="55">
+
+	</a>
+</center>
+
+</h5>
+
+
+</body>
+</html>
+              
+            
+
+            
+        
+
+
+
+
+
